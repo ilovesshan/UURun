@@ -31,7 +31,7 @@
             android:exported="false"
             android:theme="@style/Theme.UURun.ActionBar" />
         <activity
-            android:name=".view.ProfileActivity"
+            android:name=".view.UserInfoDetailActivity"
             android:exported="false" />
         <activity
             android:name=".view.RegisterActivity"

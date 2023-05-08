@@ -19,7 +19,7 @@ import com.school.uurun.view.viewcallback.ProfileViewCallback;
 /**
  * 个人中心界面
  */
-public class ProfileActivity extends AppCompatActivity implements ProfileViewCallback {
+public class UserInfoDetailActivity extends AppCompatActivity implements ProfileViewCallback {
     private EditText etAccount;
     private EditText etNickname;
     private EditText etPassword;
@@ -34,7 +34,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileViewCal
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_user_info_detail);
 
         userService = new UserService(this);
 

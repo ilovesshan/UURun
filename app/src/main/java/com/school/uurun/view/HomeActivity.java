@@ -65,7 +65,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.user_info:
                 //跳转到个人信息界面
-                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+                startActivity(new Intent(HomeActivity.this, UserInfoDetailActivity.class));
                 break;
             case R.id.logout:
                 //跳转到登录界面

@@ -8,9 +8,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -18,13 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.school.uurun.R;
-import com.school.uurun.entity.User;
-import com.school.uurun.service.UserService;
 import com.school.uurun.utils.DictUtil;
-import com.school.uurun.view.HomeActivity;
 import com.school.uurun.view.LoginActivity;
-import com.school.uurun.view.ProfileActivity;
-import com.school.uurun.view.viewcallback.ProfileViewCallback;
+import com.school.uurun.view.UserInfoDetailActivity;
 
 
 public class ProfileFragment extends Fragment {
@@ -76,7 +70,7 @@ public class ProfileFragment extends Fragment {
 
         // 用户信息卡被点击
         rlUserCard.setOnClickListener(v -> {
-            startActivity(new Intent(context, ProfileActivity.class));
+            startActivity(new Intent(context, UserInfoDetailActivity.class));
         });
 
         // 推广有奖被点击
