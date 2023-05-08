@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <!-- 订单编号以及订单类型 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--订单名称-->
+            <TextView
+                android:id="@+id/tv_order_goods_name_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单名称:" />
+
+            <TextView
+                android:id="@+id/tv_order_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_order_goods_name_key"
+                android:text="天颛三角支架晾衣杆"
+                android:textColor="@color/black" />
+
+
+            <!--<TextView-->
+            <!--    android:id="@+id/tv_order_text"-->
+            <!--    android:layout_width="wrap_content"-->
+            <!--    android:layout_height="wrap_content"-->
+            <!--    android:text="订单编号:" />-->
+
+            <!--<TextView-->
+            <!--    android:id="@+id/tv_order"-->
+            <!--    android:layout_width="wrap_content"-->
+            <!--    android:layout_height="wrap_content"-->
+            <!--    android:layout_marginLeft="10dp"-->
+            <!--    android:layout_toRightOf="@id/tv_order_text"-->
+            <!--    android:text="b46222b0dccf46dc8eebc95aa94aef53"-->
+            <!--    android:textColor="@color/black" />-->
+
+            <TextView
+                android:id="@+id/tv_order_status_and_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/teal_700"
+                android:paddingLeft="4dp"
+                android:paddingTop="1dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="1dp"
+                android:text="快递 | 待接单"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <!-- 用户/骑手信息 打赏金额-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <!--用户/骑手信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_submit_or_receive_user_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下单用户:" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="筱溜子"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="15445782255"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!--打赏金额-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打赏金额:" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="￥10.00"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--订单名称-->
+        <!--<LinearLayout-->
+        <!--    android:layout_width="wrap_content"-->
+        <!--    android:layout_height="wrap_content"-->
+        <!--    android:layout_marginTop="5dp">-->
+
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="订单名称:" />-->
+
+        <!--    <TextView-->
+        <!--        android:id="@+id/tv_order_goods_name"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginLeft="10dp"-->
+        <!--        android:text="晾衣架支架"-->
+        <!--        android:textColor="@color/black" />-->
+        <!--</LinearLayout>-->
+
+        <!--取单地址-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取单地址:" />
+
+            <TextView
+                android:id="@+id/tv_delivery_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="西南科技大学城市学院菜鸟驿站"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--配送地址-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送地址:" />
+
+            <TextView
+                android:id="@+id/tv_receive_user_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="西南科技大学城市学院学生公寓3栋520"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--下单时间-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下单时间:" />
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2024-05-19 14:12:45"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--接单时间-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_receive_time_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接单时间:" />
+
+            <TextView
+                android:id="@+id/tv_receive_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2024-05-19 14:12:45"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--订单完成时间-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_finished_time_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单完成时间:" />
+
+            <TextView
+                android:id="@+id/tv_finished_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2024-05-19 14:12:45"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!--订单备注-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单备注:" />
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="取件编号是：315，收件人：TXG，重量大概10KG,注意不要破环里面物品,谢谢~" />
+        </LinearLayout>
+
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="#efefef" />
+
+        <!--操作按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right">
+
+            <Button
+                android:id="@+id/btn_concat_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="联系骑手" />
+
+            <Button
+                android:id="@+id/btn_grab_on_order"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="发起抢单" />
+
+            <Button
+                android:id="@+id/btn_concat_user"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="联系用户" />
+
+            <Button
+                android:id="@+id/btn_finish_order"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:text="完成订单" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
