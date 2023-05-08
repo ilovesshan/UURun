@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,9 @@ public class SubmitOrderActivity extends AppCompatActivity implements SubmitOrde
     private String nickname;
     private String phone;
     private String orderType;
+    private TextView tvNavTitle;
+    private ImageView ivNavBack;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +79,16 @@ public class SubmitOrderActivity extends AppCompatActivity implements SubmitOrde
         etMoney = findViewById(R.id.et_money);
         etNote = findViewById(R.id.et_note);
         btnSubmitOrder = findViewById(R.id.btn_submit_order);
+        tvNavTitle = findViewById(R.id.tv_nav_title);
+        ivNavBack = findViewById(R.id.iv_nav_back);
+
 
         // 区分当前的订单类型(1快递、2外卖)
         tvOrderType.setText(orderTypeText);
+        tvNavTitle.setText(orderTypeText);
+
+        // 导航栏返回按钮点击
+        ivNavBack.setOnClickListener(v -> finish());
 
 
         // 订单提交按钮

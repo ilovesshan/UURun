@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 
 import com.school.uurun.R;
 import com.school.uurun.adapter.SwiperAdapter;
-import com.school.uurun.view.HomeActivity;
 import com.school.uurun.view.ReceiveOrderActivity;
 import com.school.uurun.view.SubmitOrderActivity;
 

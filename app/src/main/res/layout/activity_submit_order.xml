@@ -5,146 +5,191 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".view.SubmitOrderActivity">
 
-    <!--订单类型-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700">
 
-        <TextView
+        <ImageView
+            android:id="@+id/iv_nav_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="订单类型："
-            android:textSize="16sp" />
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24" />
 
         <TextView
-            android:id="@+id/tv_order_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/teal_700"
-            android:paddingLeft="3dp"
-            android:paddingTop="1dp"
-            android:paddingRight="3dp"
-            android:paddingBottom="1dp"
-            android:text="快递帮拿"
+            android:id="@+id/tv_nav_title"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="快递帮取"
             android:textColor="@color/white"
-            android:textSize="12sp" />
-    </LinearLayout>
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="49dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="物品名称："
-            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/et_order_name"
+        <!--订单类型-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="输入订单物品名称"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp"
+            android:gravity="center_vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单类型："
+                android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
+            <TextView
+                android:id="@+id/tv_order_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_tag_primary"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:text="快递帮拿"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="取单地址："
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/et_delivery_address"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="输入取单地址"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物品名称："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_order_name"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:hint="输入订单物品名称"
+                android:paddingLeft="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="配送地址："
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/et_receive_user_address"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="输入配送地址"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取单地址："
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="打赏金额："
-            android:textSize="16sp" />
+            <EditText
+                android:id="@+id/et_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:hint="输入取单地址"
+                android:paddingLeft="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_money"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="输入打赏金额"
-            android:inputType="numberDecimal"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送地址："
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="订单备注："
-            android:textSize="16sp" />
+            <EditText
+                android:id="@+id/et_receive_user_address"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:hint="输入配送地址"
+                android:paddingLeft="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/et_note"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:hint="输入订单备注(快递编号,收件人等等信息)"
-            android:inputType="textMultiLine"
-            android:maxLines="10"
-            android:minLines="8"
-            android:scrollbars="vertical"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打赏金额："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:hint="输入打赏金额"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单备注："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_note"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:hint="输入订单备注(快递编号,收件人等等信息)"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="8"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+        </LinearLayout>
 
 
-    <!--提交订单按钮-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <!--提交订单按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_submit_order"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_weight="1"
-            android:text="提交订单" />
+            <Button
+                android:id="@+id/btn_submit_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_splash_unfill"
+                android:text="提交订单"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

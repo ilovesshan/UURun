@@ -10,6 +10,7 @@
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_unfill.xml" value="0.1715" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_input_border.xml" value="0.1715" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_primart.xml" value="0.1585" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_primary.xml" value="0.2565" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_red.xml" value="0.1585" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_home.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_login.xml" value="0.25104166666666666" />
@@ -17,6 +18,8 @@
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_menu.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_profile.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_register.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_submit_order.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_user_info_detail.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_order.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_profile.xml" value="0.2375" />

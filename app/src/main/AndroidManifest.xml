@@ -24,22 +24,16 @@
             android:exported="false" />
         <activity
             android:name=".view.ReceiveOrderActivity"
-            android:exported="false"
-            android:theme="@style/Theme.UURun.ActionBar" />
+            android:exported="false" />
         <activity
             android:name=".view.SubmitOrderActivity"
-            android:exported="false"
-            android:theme="@style/Theme.UURun.ActionBar" />
+            android:exported="false" />
         <activity
             android:name=".view.UserInfoDetailActivity"
             android:exported="false" />
         <activity
             android:name=".view.RegisterActivity"
             android:exported="false" />
-        <activity
-            android:name=".view.HomeActivity"
-            android:exported="false"
-            android:theme="@style/Theme.UURun.ActionBar" />
         <activity
             android:name=".view.LoginActivity"
             android:exported="false" />
