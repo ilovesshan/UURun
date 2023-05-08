@@ -4,11 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 /**
- * Created with IntelliJ IDEA.
- *
- * @author: ilovesshan
- * @date: 2023/5/8
- * @description:
+ * 自定义类BaseApplication继承类Application主要实现全局Context共享
  */
 public class BaseApplication extends Application {
     private static Context appContext;
