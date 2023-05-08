@@ -32,7 +32,9 @@
             <EditText
                 android:id="@+id/et_order_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:paddingLeft="10dp"
                 android:text="lulala"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -50,7 +52,9 @@
             <EditText
                 android:id="@+id/et_nickname"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:paddingLeft="10dp"
                 android:text="噜啦啦"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -68,8 +72,10 @@
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
                 android:inputType="numberPassword"
+                android:paddingLeft="10dp"
                 android:text="123456"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -87,8 +93,10 @@
             <EditText
                 android:id="@+id/et_phone"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
                 android:inputType="phone"
+                android:paddingLeft="10dp"
                 android:text="15423214789"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -127,7 +135,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -137,16 +144,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/shape_btn_splash_fill"
                 android:text=" 去登录" />
 
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="60dp"
                 android:layout_weight="1"
-                android:text="立即注册" />
+                android:background="@drawable/shape_btn_splash_unfill"
+                android:text="立即注册"
+
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 

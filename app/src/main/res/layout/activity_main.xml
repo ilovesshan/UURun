@@ -21,13 +21,16 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="登录已有账号" />
+            android:background="@drawable/shape_btn_splash_unfill"
+            android:text="登录已有账号"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="@drawable/shape_btn_splash_fill"
             android:text="新用户注册" />
     </LinearLayout>
 

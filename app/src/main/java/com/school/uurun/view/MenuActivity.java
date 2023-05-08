@@ -27,19 +27,13 @@ import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
     private static final String TAG = "MenuActivity";
-    // private FrameLayout fvContainer;
-    // private Fragment leastFragment;
-    //  private FragmentManager fragmentManager;
-
-
     private ViewPager2 vp2Container;
     private BottomNavigationView bnvBottomBar;
     final List<Fragment> fragments = new ArrayList<Fragment>() {{
-        add(new HomeFragment());
+        add(new HomeFragment(MenuActivity.this));
         add(new OrderFragment());
         add(new ProfileFragment());
     }};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,45 +96,5 @@ public class MenuActivity extends AppCompatActivity {
             }
             return true;
         });
-
-
-        // fvContainer = findViewById(R.id.fv_container);
-        // fragmentManager = getSupportFragmentManager();
-        // switchFragment(fragments.get(0));
-        // bnvBottomBar.setOnItemSelectedListener(item -> {
-        //     fvContainer.removeAllViews();
-        //     switch (item.getItemId()) {
-        //         case R.id.home:
-        //             switchFragment(fragments.get(0));
-        //             break;
-        //         case R.id.order_center:
-        //             switchFragment(fragments.get(1));
-        //             break;
-        //         case R.id.user_center:
-        //             switchFragment(fragments.get(2));
-        //             break;
-        //         default:
-        //     }
-        //     return true;
-        // });
     }
-
-    // **
-    // * 通过 hide 和 show 来控制fragment的显示和隐藏效果
-    // *
-    // * @param baseFragment baseFragment
-    // */
-    // private void switchFragment(Fragment baseFragment) {
-    //     final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    //     if (!baseFragment.isAdded()) {
-    //         fragmentTransaction.add(R.id.fv_container, baseFragment);
-    //     } else {
-    //         fragmentTransaction.show(baseFragment);
-    //     }
-    //     if (this.leastFragment != null) {
-    //         fragmentTransaction.hide(this.leastFragment);
-    //     }
-    //     this.leastFragment = baseFragment;
-    //     fragmentTransaction.commit();
-    // }
 }
