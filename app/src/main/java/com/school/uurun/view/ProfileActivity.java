@@ -116,6 +116,17 @@ public class ProfileActivity extends AppCompatActivity implements ProfileViewCal
     @Override
     public void onUpdateSuccess(User user) {
         Toast.makeText(this, "用户信息更新成功", Toast.LENGTH_SHORT).show();
+
+        // 更新sharedPreferences中的数据
+        SharedPreferences sharedPreferences = getSharedPreferences("userinfo", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("id", user.id);
+        editor.putString("account", user.account);
+        editor.putString("nickname", user.nickname);
+        editor.putString("password", user.password);
+        editor.putString("userType", user.userType);
+        editor.putString("phone", user.phone);
+        editor.apply();
     }
 
     // 用户信息更新失败

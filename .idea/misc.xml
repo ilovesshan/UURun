@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_all_out_24.xml" value="0.1585" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_order_24.xml" value="0.1455" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_smartphone_24.xml" value="0.1755" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash.xml" value="0.163" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_unfill.xml" value="0.1715" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_input_border.xml" value="0.1715" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_primart.xml" value="0.1585" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_red.xml" value="0.1585" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_home.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_login.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_main.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_menu.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_profile.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_register.xml" value="0.25104166666666666" />
-        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_home.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_order.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_profile.xml" value="0.2375" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_user_order_list.xml" value="0.25104166666666666" />

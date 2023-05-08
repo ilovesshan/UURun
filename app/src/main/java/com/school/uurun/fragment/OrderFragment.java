@@ -1,6 +1,7 @@
 
 package com.school.uurun.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderFragment extends Fragment {
+
+    private Context context;
+
+    public OrderFragment(Context context) {
+        this.context = context;
+    }
 
     private final String[] orderCenterTitles = {"已下单", "配送中", "已完结"};
 

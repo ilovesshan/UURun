@@ -2,13 +2,9 @@ package com.school.uurun.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.school.uurun.R;
 import com.school.uurun.entity.Order;
-import com.school.uurun.utils.OrderUtil;
+import com.school.uurun.utils.DictUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +56,7 @@ public class UserOrderListAdapter extends RecyclerView.Adapter<OrderInnerHolder>
         // 订单物品名称
         viewHolder.tvOrderGoodsName.setText(order.orderGoodsName);
         // 订单类型以及状态
-        viewHolder.tvOrderStatusAndType.setText(OrderUtil.getTextByOrderType(order.orderType) + " | " + OrderUtil.getTextByOrderStatus(order.status));
+        viewHolder.tvOrderStatusAndType.setText(DictUtil.getTextByOrderType(order.orderType) + " | " + DictUtil.getTextByOrderStatus(order.status));
         // 如果是已下单状态,则显式本人信息,否则就显式骑手信息
         if ("1".equals(order.status)) {
             viewHolder.tvSubmitOrReceiveUserKey.setText("下单用户:");

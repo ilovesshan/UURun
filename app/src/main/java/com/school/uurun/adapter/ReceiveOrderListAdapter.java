@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.school.uurun.R;
 import com.school.uurun.entity.Order;
-import com.school.uurun.utils.OrderUtil;
+import com.school.uurun.utils.DictUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +58,7 @@ public class ReceiveOrderListAdapter extends RecyclerView.Adapter<OrderInnerHold
         // 订单物品名称
         viewOrderInnerHolder.tvOrderGoodsName.setText(order.orderGoodsName);
         // 订单类型以及状态
-        viewOrderInnerHolder.tvOrderStatusAndType.setText(OrderUtil.getTextByOrderType(order.orderType) + " | " + OrderUtil.getTextByOrderStatus(order.status));
+        viewOrderInnerHolder.tvOrderStatusAndType.setText(DictUtil.getTextByOrderType(order.orderType) + " | " + DictUtil.getTextByOrderStatus(order.status));
         // 下单用户信息
         viewOrderInnerHolder.tvSubmitOrReceiveUserKey.setText("下单用户:");
         viewOrderInnerHolder.tvUserName.setText(order.submitNickname);

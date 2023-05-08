@@ -31,8 +31,8 @@ public class MenuActivity extends AppCompatActivity {
     private BottomNavigationView bnvBottomBar;
     final List<Fragment> fragments = new ArrayList<Fragment>() {{
         add(new HomeFragment(MenuActivity.this));
-        add(new OrderFragment());
-        add(new ProfileFragment());
+        add(new OrderFragment(MenuActivity.this));
+        add(new ProfileFragment(MenuActivity.this));
     }};
 
     @Override

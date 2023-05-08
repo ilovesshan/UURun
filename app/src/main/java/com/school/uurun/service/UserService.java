@@ -2,6 +2,7 @@ package com.school.uurun.service;
 
 import android.content.Context;
 
+import com.school.uurun.base.BaseApplication;
 import com.school.uurun.dao.UserDao;
 import com.school.uurun.entity.User;
 import com.school.uurun.view.viewcallback.LoginViewCallback;

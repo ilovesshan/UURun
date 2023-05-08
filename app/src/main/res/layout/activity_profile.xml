@@ -5,138 +5,177 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".view.ProfileActivity">
 
-
-    <!--账户-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="49dp">
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="账户："
-            android:textSize="16sp" />
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24" />
 
-        <EditText
-            android:id="@+id/et_order_name"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="lulala"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="39dp"
+            android:layout_centerInParent="true"
 
-    <!--昵称-->
+            android:gravity="center"
+            android:text="详情信息"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="49dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="昵称："
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/et_nickname"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!--账户-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="噜啦啦"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:layout_height="49dp">
 
-    <!--密码-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="密码："
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberPassword"
-            android:text="123456"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <!--电话-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="电话："
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/et_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:text="15423214789"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <!--类型-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="类型："
-            android:textSize="16sp" />
-
-        <RadioGroup
-            android:id="@+id/rg_user_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rb_normal_user"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="false"
-                android:text="普通用户" />
+                android:text="账户："
+                android:textSize="16sp" />
 
-            <RadioButton
-                android:id="@+id/rb_driver_user"
+            <EditText
+
+                android:id="@+id/et_order_name"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:paddingLeft="10dp"
+                android:text="lulala"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--昵称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:checked="true"
-                android:clickable="false"
-                android:text="骑手用户" />
-        </RadioGroup>
+                android:text="昵称："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:paddingLeft="10dp"
+                android:text="噜啦啦"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:inputType="numberPassword"
+                android:paddingLeft="10dp"
+                android:text="123456"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话："
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@drawable/shape_input_border"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:text="15423214789"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--类型-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类型："
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_user_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_normal_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="普通用户" />
+
+                <RadioButton
+                    android:id="@+id/rb_driver_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:text="骑手用户" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--保存信息按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_save_user_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_splash_unfill"
+                android:text="保存信息"
+                android:textColor="@color/white" />
+        </LinearLayout>
 
     </LinearLayout>
-
-    <!--保存信息按钮-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/btn_save_user_info"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_weight="1"
-            android:text="保存信息" />
-    </LinearLayout>
-
-
 </LinearLayout>

@@ -7,9 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 /**
- * 订单工具类
+ * 字典工具类
  */
-public class OrderUtil {
+public class DictUtil {
     /**
      * 根据 status 获取订单状态
      *
@@ -44,4 +44,22 @@ public class OrderUtil {
         }
         return "";
     }
+
+
+    /**
+     * 根据 userType 获取用户类型
+     *
+     * @param userType code码
+     * @return 订单状态
+     */
+    public static String getTextByUserType(String userType) {
+        if ("1".equals(userType)) {
+            return "普通用户";
+        }
+        if ("2".equals(userType)) {
+            return "骑手用户";
+        }
+        return "";
+    }
+
 }
