@@ -2,6 +2,7 @@ package com.school.uurun.dao;
 
 
 import android.annotation.SuppressLint;
+import android.app.Application;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.school.uurun.base.BaseApplication;
 import com.school.uurun.entity.User;
 import com.school.uurun.utils.SQLiteHelper;
 
@@ -16,13 +18,7 @@ import com.school.uurun.utils.SQLiteHelper;
  * 连接数据库 负责对用户表进行增删改查
  */
 public class UserDao {
-    private SQLiteHelper sqLiteHelper;
-
-    public UserDao(Context context) {
-        sqLiteHelper = new SQLiteHelper(context);
-    }
-
-
+    private SQLiteHelper sqLiteHelper = new SQLiteHelper();
     /**
      * 根据账户/手机号 + 密码 查询用户
      *

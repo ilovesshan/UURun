@@ -2,7 +2,6 @@ package com.school.uurun.service;
 
 import android.content.Context;
 
-import com.school.uurun.base.BaseApplication;
 import com.school.uurun.dao.UserDao;
 import com.school.uurun.entity.User;
 import com.school.uurun.view.viewcallback.LoginViewCallback;
@@ -17,27 +16,18 @@ public class UserService {
     private RegisterViewCallback registerViewCallback;
     private LoginViewCallback loginViewCallback;
     private ProfileViewCallback profileViewCallback;
-    private UserDao userDao = null;
+    private final UserDao userDao = new UserDao();
 
     public UserService(RegisterViewCallback registerViewCallback) {
         this.registerViewCallback = registerViewCallback;
-        if (userDao == null) {
-            userDao = new UserDao((Context) registerViewCallback);
-        }
     }
 
     public UserService(LoginViewCallback loginViewCallback) {
         this.loginViewCallback = loginViewCallback;
-        if (userDao == null) {
-            userDao = new UserDao((Context) loginViewCallback);
-        }
     }
 
     public UserService(ProfileViewCallback profileViewCallback) {
         this.profileViewCallback = profileViewCallback;
-        if (userDao == null) {
-            userDao = new UserDao((Context) profileViewCallback);
-        }
     }
 
     /**

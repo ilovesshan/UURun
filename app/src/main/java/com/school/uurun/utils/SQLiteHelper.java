@@ -6,15 +6,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.school.uurun.base.BaseApplication;
+
 /**
  * 数据库连接工具
  */
 public class SQLiteHelper extends SQLiteOpenHelper {
-    private Context context;
+    private Context context = BaseApplication.getAppContext();
 
-    public SQLiteHelper(@Nullable Context context) {
-        super(context, "uurun.db", null, 1);
-        this.context = context;
+    public SQLiteHelper() {
+        super(BaseApplication.getAppContext(), "uurun.db", null, 1);
     }
 
     @Override

@@ -21,12 +21,7 @@ import java.util.List;
  * 连接数据库 负责对订单表进行增删改查
  */
 public class OrderDao {
-    private SQLiteHelper sqLiteHelper;
-
-    public OrderDao(Context context) {
-        sqLiteHelper = new SQLiteHelper(context);
-    }
-
+    private SQLiteHelper sqLiteHelper = new SQLiteHelper();
 
     /**
      * 根据下单用户ID + 订单状态 + 订单类型 订单信息(主要查询用户相关的订单)

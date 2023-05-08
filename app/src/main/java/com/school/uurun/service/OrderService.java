@@ -20,34 +20,22 @@ public class OrderService {
     private UserOrderListViewCallback userOrderListViewCallback;
     private ReceiveOrderViewCallback receiveOrderViewCallback;
     private ReceiveOrderListViewCallback receiveOrderListViewCallback;
-    private OrderDao orderDao = null;
+    private final OrderDao orderDao = new OrderDao();
 
     public OrderService(SubmitOrderViewCallback submitOrderViewCallback) {
         this.submitOrderViewCallback = submitOrderViewCallback;
-        if (orderDao == null) {
-            orderDao = new OrderDao((Context) submitOrderViewCallback);
-        }
     }
 
     public OrderService(UserOrderListViewCallback userOrderListViewCallback) {
         this.userOrderListViewCallback = userOrderListViewCallback;
-        if (orderDao == null) {
-            orderDao = new OrderDao((Context) userOrderListViewCallback);
-        }
     }
 
     public OrderService(ReceiveOrderViewCallback receiveOrderViewCallback) {
         this.receiveOrderViewCallback = receiveOrderViewCallback;
-        if (orderDao == null) {
-            orderDao = new OrderDao((Context) receiveOrderViewCallback);
-        }
     }
 
     public OrderService(ReceiveOrderListViewCallback receiveOrderListViewCallback) {
         this.receiveOrderListViewCallback = receiveOrderListViewCallback;
-        if (orderDao == null) {
-            orderDao = new OrderDao((Context) receiveOrderListViewCallback);
-        }
     }
 
     /**
