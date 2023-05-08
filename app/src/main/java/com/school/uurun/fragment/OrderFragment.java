@@ -20,6 +20,9 @@ import com.school.uurun.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 订单列表
+ */
 public class OrderFragment extends Fragment {
 
     private Context context;
@@ -28,8 +31,10 @@ public class OrderFragment extends Fragment {
         this.context = context;
     }
 
+    // 订单页面的Tab的Title
     private final String[] orderCenterTitles = {"已下单", "配送中", "已完结"};
 
+    // 订单页面的Tab的对应的内容
     final List<Fragment> fragments = new ArrayList<Fragment>() {{
         add(UserOrderListFragment.newInstance("1", "1"));
         add(UserOrderListFragment.newInstance("1", "2"));
@@ -44,6 +49,7 @@ public class OrderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_order, container, false);
+        // 初始化控件以及绑定事件监听
         initViewAndBindEvent(view);
         return view;
     }
@@ -53,11 +59,11 @@ public class OrderFragment extends Fragment {
         TabLayout tlTabBar = view.findViewById(R.id.tl_tab_bar);
         ViewPager2 vp2OrderContainer = view.findViewById(R.id.vp2_order_container);
 
-        // 设置viewpager滚动方向
+        // 设置ViewPager2滚动方向
         vp2OrderContainer.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        // 设置viewpager最大翻页数
+        // 设置ViewPager2最大翻页数
         vp2OrderContainer.setOffscreenPageLimit(fragments.size());
-        // 设置viewpager适配器
+        // 设置ViewPager2适配器
         vp2OrderContainer.setAdapter(new FragmentStateAdapter(this) {
             @NonNull
             @Override
@@ -70,7 +76,7 @@ public class OrderFragment extends Fragment {
                 return fragments.size();
             }
         });
-        // 绑定ViewPager和TabLayout 进行联动
+        // 绑定ViewPager2和TabLayout进行联动
         new TabLayoutMediator(tlTabBar, vp2OrderContainer, true, (tab, position) -> tab.setText(orderCenterTitles[position])).attach();
     }
 }

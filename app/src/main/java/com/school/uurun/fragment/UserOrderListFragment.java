@@ -23,6 +23,9 @@ import com.school.uurun.view.viewcallback.UserOrderListViewCallback;
 
 import java.util.List;
 
+/**
+ * 用户订单页面（每一个Tab的页面，订单页面的嵌套子页面）
+ */
 @SuppressLint("SetTextI18n")
 public class UserOrderListFragment extends Fragment implements UserOrderListViewCallback {
     private RecyclerView rvUserOrderList;
@@ -39,6 +42,7 @@ public class UserOrderListFragment extends Fragment implements UserOrderListView
     public UserOrderListFragment() {
     }
 
+    // 接收初始化数据 订单类型和订单状态， 当前页面需要根据不同的订单参数查询不同的订单数据
     public static UserOrderListFragment newInstance(String orderType, String status) {
         UserOrderListFragment fragment = new UserOrderListFragment();
         Bundle args = new Bundle();
@@ -51,6 +55,7 @@ public class UserOrderListFragment extends Fragment implements UserOrderListView
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 获取Bundle中的参数
         if (getArguments() != null) {
             orderType = getArguments().getString("orderType");
             status = getArguments().getString("status");

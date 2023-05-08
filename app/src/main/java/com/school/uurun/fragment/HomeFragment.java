@@ -19,6 +19,9 @@ import com.school.uurun.adapter.SwiperAdapter;
 import com.school.uurun.view.ReceiveOrderActivity;
 import com.school.uurun.view.SubmitOrderActivity;
 
+/**
+ * 首页
+ */
 public class HomeFragment extends Fragment {
     private Context context;
 

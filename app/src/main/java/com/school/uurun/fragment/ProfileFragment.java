@@ -21,6 +21,9 @@ import com.school.uurun.view.LoginActivity;
 import com.school.uurun.view.UserInfoDetailActivity;
 
 
+/**
+ * 个人中心
+ */
 public class ProfileFragment extends Fragment {
     private Context context;
     private View view;
@@ -80,7 +83,7 @@ public class ProfileFragment extends Fragment {
 
         // 关于软件被点击
         rlAboutApp.setOnClickListener(v -> {
-            Toast.makeText(context, "UURun power by android version 1.0.0", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "UURun app power by android version 1.0.0", Toast.LENGTH_SHORT).show();
         });
 
         // 退出登录被点击
