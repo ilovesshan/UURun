@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class UserInfoDetailActivity extends AppCompatActivity implements Profile
     private RadioButton rbNormalUser;
     private RadioButton rbDriverUser;
     private Button btnSaveUserInfo;
+    private ImageView ivNavBack;
 
 
     private UserService userService;
@@ -51,6 +53,7 @@ public class UserInfoDetailActivity extends AppCompatActivity implements Profile
         rbNormalUser = findViewById(R.id.rb_normal_user);
         rbDriverUser = findViewById(R.id.rb_driver_user);
         btnSaveUserInfo = findViewById(R.id.btn_save_user_info);
+        ivNavBack = findViewById(R.id.iv_nav_back);
 
 
         // 获取当前登录用户信息
@@ -73,6 +76,10 @@ public class UserInfoDetailActivity extends AppCompatActivity implements Profile
         } else {
             rbDriverUser.setChecked(true);
         }
+
+
+        // 导航栏返回按钮点击
+        ivNavBack.setOnClickListener(v -> finish());
 
 
         // 保存用户信息按钮被点击
