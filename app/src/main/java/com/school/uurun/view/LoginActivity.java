@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity implements LoginViewCallbac
         editor.apply();
 
         // 登录成功跳转到首页
-        final Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        final Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
         startActivity(intent);
     }
 

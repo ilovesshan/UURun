@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_order_24.xml" value="0.1455" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_menu.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_home.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_order.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_profile.xml" value="0.2375" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_user_order_list.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/menu/menu_bottom_navgation.xml" value="0.25104166666666666" />
         <entry key="..\:/school/UURun/app/src/main/res/layout/activity_home.xml" value="0.25104166666666666" />
         <entry key="..\:/school/UURun/app/src/main/res/layout/activity_hoome.xml" value="0.24739583333333334" />
         <entry key="..\:/school/UURun/app/src/main/res/layout/activity_login.xml" value="0.20729166666666668" />
