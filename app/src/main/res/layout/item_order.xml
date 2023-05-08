@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@color/teal_700"
+                android:background="@drawable/shape_btn_primary"
                 android:paddingLeft="4dp"
                 android:paddingTop="1dp"
                 android:paddingRight="4dp"
@@ -289,26 +289,41 @@
             <Button
                 android:id="@+id/btn_concat_driver"
                 android:layout_width="wrap_content"
-                android:layout_height="39dp"
-                android:text="联系骑手" />
+                android:layout_height="26dp"
+                android:background="@drawable/shape_tag_green"
+                android:text="联系骑手"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_grab_on_order"
                 android:layout_width="wrap_content"
-                android:layout_height="39dp"
-                android:text="发起抢单" />
+                android:layout_height="26dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_btn_red"
+                android:text="发起抢单"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_concat_user"
                 android:layout_width="wrap_content"
-                android:layout_height="39dp"
-                android:text="联系用户" />
+                android:layout_height="26dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_tag_green"
+                android:text="联系用户"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_finish_order"
                 android:layout_width="wrap_content"
-                android:layout_height="39dp"
-                android:text="完成订单" />
+                android:layout_height="26dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_btn_primary"
+                android:text="完成订单"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
         </LinearLayout>
 
     </LinearLayout>

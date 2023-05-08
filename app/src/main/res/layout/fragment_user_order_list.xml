@@ -5,12 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".fragment.UserOrderListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tv_title"
-        android:background="@color/teal_200"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user_order_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="用户订单列表" />
+        android:background="#efefef" />
 
 </FrameLayout>

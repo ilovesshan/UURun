@@ -2,6 +2,8 @@ package com.school.uurun.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.school.uurun.R;
+import com.school.uurun.base.BaseApplication;
 import com.school.uurun.entity.Order;
 import com.school.uurun.utils.DictUtil;
 
@@ -113,7 +116,12 @@ public class ReceiveOrderListAdapter extends RecyclerView.Adapter<OrderInnerHold
         // 联系用户按钮(骑手使用) 接单之后才显示
         if ("2".equals(order.status) || "3".equals(order.status)) {
             viewOrderInnerHolder.btnConcatUser.setVisibility(View.VISIBLE);
-            viewOrderInnerHolder.btnConcatUser.setOnClickListener(v -> Toast.makeText(context, "联系用户:" + order.submitPhone, Toast.LENGTH_SHORT).show());
+            viewOrderInnerHolder.btnConcatUser.setOnClickListener(v -> {
+                Toast.makeText(context, "联系用户:" + order.submitPhone, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + order.receivePhone));
+                BaseApplication.getAppContext().startActivity(intent);
+            });
         } else {
             viewOrderInnerHolder.btnConcatUser.setVisibility(View.GONE);
         }

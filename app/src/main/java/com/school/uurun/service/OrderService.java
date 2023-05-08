@@ -1,7 +1,5 @@
 package com.school.uurun.service;
 
-import android.content.Context;
-
 import com.school.uurun.dao.OrderDao;
 import com.school.uurun.entity.Order;
 import com.school.uurun.view.viewcallback.ReceiveOrderListViewCallback;
@@ -46,8 +44,26 @@ public class OrderService {
      * @param orderType 订单类型
      */
     public void selectUserOrderByUserIdAndStatusAndOrderType(String userId, String status, String orderType) {
-        if (orderDao != null && userOrderListViewCallback != null) {
+        if (userOrderListViewCallback != null) {
             final List<Order> orderList = orderDao.selectUserOrderByUserIdAndStatusAndOrderType(userId, status, orderType);
+            if (orderList == null || orderList.size() == 0) {
+                userOrderListViewCallback.onLoadEmpty();
+                return;
+            }
+            userOrderListViewCallback.onLoadSuccess(orderList);
+        }
+    }
+
+
+    /**
+     * 根据下单用户ID  + 订单状态 订单信息(主要查询用户相关的订单)
+     *
+     * @param userId 用户ID
+     * @param status 订单状态
+     */
+    public void selectUserOrderByUserIdAndStatus(String userId, String status) {
+        if (userOrderListViewCallback != null) {
+            final List<Order> orderList = orderDao.selectUserOrderByUserIdAnddStatus(userId, status);
             if (orderList == null || orderList.size() == 0) {
                 userOrderListViewCallback.onLoadEmpty();
                 return;
@@ -63,7 +79,7 @@ public class OrderService {
      * @param order 订单信息
      */
     public void submitOrder(Order order) {
-        if (orderDao != null && submitOrderViewCallback != null) {
+        if (submitOrderViewCallback != null) {
             final long affectRows = orderDao.insertOrderInfo(order);
             if (affectRows <= 0) {
                 submitOrderViewCallback.onSubmitOrderError("下单失败,请稍后再试");
@@ -81,9 +97,26 @@ public class OrderService {
      * @param status       订单状态
      * @param orderType    订单类型
      */
-    public void selectDriverOrderByUserIdAndStatus(String driverUserId, String status, String orderType) {
-        if (orderDao != null && receiveOrderListViewCallback != null) {
-            final List<Order> orderList = orderDao.selectDriverOrderByUserIdAndStatus(driverUserId, status, orderType);
+    public void selectDriverOrderByUserIdAndStatusAndOrderType(String driverUserId, String status, String orderType) {
+        if (receiveOrderListViewCallback != null) {
+            final List<Order> orderList = orderDao.selectDriverOrderByUserIdAndStatusAndOrderType(driverUserId, status, orderType);
+            if (orderList == null || orderList.size() == 0) {
+                receiveOrderListViewCallback.onLoadEmpty();
+                return;
+            }
+            receiveOrderListViewCallback.onLoadSuccess(orderList);
+        }
+    }
+
+    /**
+     * 根据骑手用户ID + 订单状态订单信息(主要查询骑手相关的订单)
+     *
+     * @param driverUserId 骑手ID
+     * @param status    订单状态
+     */
+    public void selectDriverOrderByUserIdAndStatus(String driverUserId, String status) {
+        if (receiveOrderListViewCallback != null) {
+            final List<Order> orderList = orderDao.selectDriverOrderByUserIdAndStatus(driverUserId, status);
             if (orderList == null || orderList.size() == 0) {
                 receiveOrderListViewCallback.onLoadEmpty();
                 return;
@@ -100,7 +133,7 @@ public class OrderService {
      */
     public void updateOrderInfo(Order order, boolean isList) {
         if (isList) {
-            if (orderDao != null && receiveOrderListViewCallback != null) {
+            if (receiveOrderListViewCallback != null) {
                 final long affectRows = orderDao.updateOrderInfo(order);
                 if (affectRows <= 0) {
                     receiveOrderListViewCallback.onUpdateError("订单状态更新失败,请稍后再试");
@@ -109,7 +142,7 @@ public class OrderService {
                 receiveOrderListViewCallback.onUpdateSuccess();
             }
         } else {
-            if (orderDao != null && receiveOrderViewCallback != null) {
+            if (receiveOrderViewCallback != null) {
                 final long affectRows = orderDao.updateOrderInfo(order);
                 if (affectRows <= 0) {
                     receiveOrderViewCallback.onUpdateError("抢单失败,请稍后再试");
@@ -127,7 +160,7 @@ public class OrderService {
      * @return 订单信息
      */
     public void selectOrderByStatusAndOrderType(String status, String orderType) {
-        if (orderDao != null && receiveOrderViewCallback != null) {
+        if (receiveOrderViewCallback != null) {
             final List<Order> orderList = orderDao.selectOrderByStatusAndOrderType(status, orderType);
             if (orderList == null || orderList.size() == 0) {
                 receiveOrderViewCallback.onLoadEmpty();

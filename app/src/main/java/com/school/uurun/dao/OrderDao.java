@@ -40,6 +40,21 @@ public class OrderDao {
 
 
     /**
+     * 根据下单用户ID  + 订单类型 订单信息(主要查询用户相关的订单)
+     *
+     * @param userId 用户ID
+     * @param status 订单类型
+     * @return 订单信息
+     */
+    public List<Order> selectUserOrderByUserIdAnddStatus(String userId, String status) {
+        final SQLiteDatabase readableDatabase = sqLiteHelper.getReadableDatabase();
+        String sql = "select * from t_order where submit_user_id = ? and status = ? order by create_time desc";
+        final Cursor cursor = readableDatabase.rawQuery(sql, new String[]{userId, status});
+        return getSingleUserByCursor(cursor);
+    }
+
+
+    /**
      * 根据骑手用户ID + 订单状态订单信息(主要查询骑手相关的订单)
      *
      * @param driverUserId 骑手ID
@@ -47,10 +62,25 @@ public class OrderDao {
      * @param orderType    订单类型
      * @return 订单信息
      */
-    public List<Order> selectDriverOrderByUserIdAndStatus(String driverUserId, String status, String orderType) {
+    public List<Order> selectDriverOrderByUserIdAndStatusAndOrderType(String driverUserId, String status, String orderType) {
         final SQLiteDatabase readableDatabase = sqLiteHelper.getReadableDatabase();
         String sql = "select * from t_order where receive_user_id = ? and status = ? and order_type = ? order by create_time desc";
         final Cursor cursor = readableDatabase.rawQuery(sql, new String[]{driverUserId, status, orderType});
+        return getSingleUserByCursor(cursor);
+    }
+
+
+    /**
+     * 根据骑手用户ID + 订单状态订单信息(主要查询骑手相关的订单)
+     *
+     * @param driverUserId 骑手ID
+     * @param status       订单状态
+     * @return 订单信息
+     */
+    public List<Order> selectDriverOrderByUserIdAndStatus(String driverUserId, String status) {
+        final SQLiteDatabase readableDatabase = sqLiteHelper.getReadableDatabase();
+        String sql = "select * from t_order where receive_user_id = ? and status = ? order by create_time desc";
+        final Cursor cursor = readableDatabase.rawQuery(sql, new String[]{driverUserId, status});
         return getSingleUserByCursor(cursor);
     }
 

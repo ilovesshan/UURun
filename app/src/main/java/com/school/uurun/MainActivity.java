@@ -1,11 +1,13 @@
 package com.school.uurun;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.school.uurun.utils.PermissionUtil;
 import com.school.uurun.view.LoginActivity;
 import com.school.uurun.view.RegisterActivity;
 
@@ -21,8 +23,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 首次加载时 申请所需要的权限
+        PermissionUtil.checkAndRequestPermission(this, PermissionUtil.PERMISSIONS, 0);
+
         // 初始化控件以及绑定事件监听
         initViewAndBindEvent();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        PermissionUtil.checkGranted(this, requestCode, permissions, grantResults);
     }
 
     private void initViewAndBindEvent() {

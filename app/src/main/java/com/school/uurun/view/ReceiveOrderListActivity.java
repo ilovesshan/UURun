@@ -12,15 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.school.uurun.R;
 import com.school.uurun.adapter.ReceiveOrderListAdapter;
-import com.school.uurun.adapter.UserOrderListAdapter;
 import com.school.uurun.entity.Order;
 import com.school.uurun.service.OrderService;
 import com.school.uurun.utils.DateTimeUtil;
 import com.school.uurun.view.viewcallback.ReceiveOrderListViewCallback;
-import com.school.uurun.view.viewcallback.UserOrderListViewCallback;
 
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 骑手相关的订单列表界面(配送中/已完成)
@@ -76,7 +73,7 @@ public class ReceiveOrderListActivity extends AppCompatActivity implements Recei
 
         // 请求数据
         orderService = new OrderService(this);
-        orderService.selectDriverOrderByUserIdAndStatus(userId, status, orderType);
+        orderService.selectDriverOrderByUserIdAndStatusAndOrderType(userId, status, orderType);
     }
 
 

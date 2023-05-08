@@ -6,9 +6,14 @@
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_all_out_24.xml" value="0.1585" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_order_24.xml" value="0.1455" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/ic_baseline_smartphone_24.xml" value="0.1755" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_green.xml" value="0.1395" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash.xml" value="0.163" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_fill.xml" value="0.1395" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_unfill.xml" value="0.1715" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_unfill_green.xml" value="0.1395" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_btn_splash_unfill_red.xml" value="0.1395" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_input_border.xml" value="0.1715" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_green.xml" value="0.1395" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_primart.xml" value="0.1585" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_primary.xml" value="0.2565" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/drawable/shape_tag_red.xml" value="0.1585" />
@@ -20,10 +25,12 @@
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_register.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_submit_order.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_user_info_detail.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/activity_user_order_list.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_order.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_profile.xml" value="0.2375" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/fragment_user_order_list.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/layout/item_order.xml" value="0.264" />
         <entry key="..\:/Users/26659/Desktop/UURun/UURun/app/src/main/res/menu/menu_bottom_navgation.xml" value="0.25104166666666666" />
         <entry key="..\:/school/UURun/app/src/main/res/layout/activity_home.xml" value="0.25104166666666666" />
         <entry key="..\:/school/UURun/app/src/main/res/layout/activity_hoome.xml" value="0.24739583333333334" />
