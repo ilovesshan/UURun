@@ -119,6 +119,8 @@ public class ReceiveOrderListAdapter extends RecyclerView.Adapter<OrderInnerHold
             viewOrderInnerHolder.btnConcatUser.setOnClickListener(v -> {
                 Toast.makeText(context, "联系用户:" + order.submitPhone, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_DIAL);
+                // 这里需要为当前调起的Activity设置启动模式为FLAG_ACTIVITY_NEW_TASK，添加一个新的任务栈，否则会报错 Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag. Is this really what you want?
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setData(Uri.parse("tel:" + order.receivePhone));
                 BaseApplication.getAppContext().startActivity(intent);
             });
