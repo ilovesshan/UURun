@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.school.uurun.R;
@@ -22,7 +24,6 @@ import java.util.List;
  */
 public class UserOrderListActivity extends AppCompatActivity implements UserOrderListViewCallback {
     private static final String TAG = "UserOrderListActivity";
-
     private RecyclerView rvUserOrderList;
     private OrderService orderService;
     private UserOrderListAdapter orderListAdapter;

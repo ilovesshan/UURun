@@ -4,6 +4,10 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +19,7 @@ import com.school.uurun.adapter.ReceiveOrderListAdapter;
 import com.school.uurun.entity.Order;
 import com.school.uurun.service.OrderService;
 import com.school.uurun.utils.DateTimeUtil;
+import com.school.uurun.utils.DictUtil;
 import com.school.uurun.view.viewcallback.ReceiveOrderListViewCallback;
 
 import java.util.List;
@@ -24,7 +29,8 @@ import java.util.List;
  */
 public class ReceiveOrderListActivity extends AppCompatActivity implements ReceiveOrderListViewCallback {
     private static final String TAG = "UserOrderListActivity";
-
+    private ImageView ivNavBack;
+    private TextView tvNavTitle;
     private RecyclerView rvUserOrderList;
     private OrderService orderService;
     private ReceiveOrderListAdapter orderListAdapter;
@@ -36,6 +42,13 @@ public class ReceiveOrderListActivity extends AppCompatActivity implements Recei
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receive_order_list);
+
+        // 从Intent中获取数据啊
+        final Intent intent = getIntent();
+        userId = intent.getStringExtra("userId");
+        status = intent.getStringExtra("status");
+        orderType = intent.getStringExtra("orderType");
+
         // 初始化控件以及绑定事件监听
         initViewAndBindEvent();
     }
@@ -43,12 +56,6 @@ public class ReceiveOrderListActivity extends AppCompatActivity implements Recei
     @Override
     protected void onStart() {
         super.onStart();
-        // 从Intent中获取数据啊
-        final Intent intent = getIntent();
-        userId = intent.getStringExtra("userId");
-        status = intent.getStringExtra("status");
-        orderType = intent.getStringExtra("orderType");
-
         // 初始化适配器
         orderListAdapter = new ReceiveOrderListAdapter(this);
         // 订单结算按钮被点击
@@ -78,7 +85,14 @@ public class ReceiveOrderListActivity extends AppCompatActivity implements Recei
 
 
     private void initViewAndBindEvent() {
+        ivNavBack = findViewById(R.id.iv_nav_back);
+        tvNavTitle = findViewById(R.id.tv_nav_title);
         rvUserOrderList = findViewById(R.id.rv_user_order_list);
+
+        // 导航栏返回被点击
+        ivNavBack.setOnClickListener(v -> finish());
+        // 设置页面Title
+        tvNavTitle.setText(DictUtil.getTextByOrderStatus(status));
     }
 
     @Override
@@ -109,8 +123,10 @@ public class ReceiveOrderListActivity extends AppCompatActivity implements Recei
 
     @Override
     public void onUpdateSuccess() {
-        // 订单结算成功 跳去抢单页面
-        finish();
+        // 订单结算成功 暂时回到首页
+        final Intent intent = new Intent(ReceiveOrderListActivity.this, MenuActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
     @Override

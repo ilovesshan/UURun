@@ -2,6 +2,7 @@ package com.school.uurun.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +14,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.school.uurun.R;
@@ -27,8 +30,12 @@ import java.util.List;
 /**
  * 骑手抢单界面
  */
-public class ReceiveOrderActivity extends AppCompatActivity implements ReceiveOrderViewCallback {
+public class ReceiveOrderActivity extends AppCompatActivity implements ReceiveOrderViewCallback, PopupMenu.OnMenuItemClickListener {
     private static final String TAG = "ReceiveOrderActivity";
+    private ImageView ivNavMore;
+    private ImageView ivNavBack;
+    private TextView tvNavTitle;
+
     private RecyclerView rvReceiveOrderList;
     private OrderService orderService;
     private ReceiveOrderListAdapter receiveOrderListAdapter;
@@ -47,7 +54,22 @@ public class ReceiveOrderActivity extends AppCompatActivity implements ReceiveOr
     }
 
     private void initViewAndBindEvent() {
+        // 绑定控件
+        ivNavBack = findViewById(R.id.iv_nav_back);
+        tvNavTitle = findViewById(R.id.tv_nav_title);
+        ivNavMore = findViewById(R.id.iv_nav_more);
         rvReceiveOrderList = findViewById(R.id.rv_receive_order_list);
+
+        // 返回按钮点击
+        ivNavBack.setOnClickListener(v -> finish());
+        // 更多按钮点击
+        ivNavMore.setOnClickListener(v -> {
+            // 展示一个PopMenu 同于骑手选择订单类型菜单（配送中/已完成）
+            final PopupMenu menu = new PopupMenu(ReceiveOrderActivity.this, v);
+            menu.setOnMenuItemClickListener(ReceiveOrderActivity.this);
+            menu.inflate(R.menu.menu_driver_options);
+            menu.show();
+        });
     }
 
     @Override
@@ -107,23 +129,23 @@ public class ReceiveOrderActivity extends AppCompatActivity implements ReceiveOr
     // 监听菜单点击
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        String status = "";
-        switch (item.getItemId()) {
-            case R.id.in_progress_driver_order:
-                //配送中
-                status = "2";
-                break;
-            case R.id.history_driver_order:
-                // 已完成
-                status = "3";
-                break;
-            default:
-        }
-        final Intent intent = new Intent(ReceiveOrderActivity.this, ReceiveOrderListActivity.class);
-        intent.putExtra("status", status);
-        intent.putExtra("orderType", orderType);
-        intent.putExtra("userId", userId);
-        startActivity(intent);
+        // String status = "";
+        // switch (item.getItemId()) {
+        //     case R.id.in_progress_driver_order:
+        //         //配送中
+        //         status = "2";
+        //         break;
+        //     case R.id.history_driver_order:
+        //         // 已完成
+        //         status = "3";
+        //         break;
+        //     default:
+        // }
+        // final Intent intent = new Intent(ReceiveOrderActivity.this, ReceiveOrderListActivity.class);
+        // intent.putExtra("status", status);
+        // intent.putExtra("orderType", orderType);
+        // intent.putExtra("userId", userId);
+        // startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
 
@@ -169,5 +191,27 @@ public class ReceiveOrderActivity extends AppCompatActivity implements ReceiveOr
         if (orderService != null) {
             orderService.removeReceiveOrderViewCallback();
         }
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        String status = "";
+        switch (item.getItemId()) {
+            case R.id.in_progress_driver_order:
+                //配送中
+                status = "2";
+                break;
+            case R.id.history_driver_order:
+                // 已完成
+                status = "3";
+                break;
+            default:
+        }
+        final Intent intent = new Intent(ReceiveOrderActivity.this, ReceiveOrderListActivity.class);
+        intent.putExtra("status", status);
+        intent.putExtra("orderType", orderType);
+        intent.putExtra("userId", userId);
+        startActivity(intent);
+        return true;
     }
 }
