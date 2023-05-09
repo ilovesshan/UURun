@@ -290,7 +290,7 @@
                 android:id="@+id/btn_concat_driver"
                 android:layout_width="wrap_content"
                 android:layout_height="26dp"
-                android:background="@drawable/shape_tag_green"
+                android:background="@drawable/shape_btn_green"
                 android:text="联系骑手"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
@@ -310,7 +310,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="26dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/shape_tag_green"
+                android:background="@drawable/shape_btn_green"
                 android:text="联系用户"
                 android:textColor="@color/white"
                 android:textSize="12sp" />

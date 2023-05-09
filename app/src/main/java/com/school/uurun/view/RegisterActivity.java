@@ -45,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterViewC
     }
 
     private void initViewAndBindEvent() {
+        // 绑定控件
         etAccount = findViewById(R.id.et_order_name);
         etNickname = findViewById(R.id.et_nickname);
         etPassword = findViewById(R.id.et_password);
